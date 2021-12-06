@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Card from './Card'
 
 function App() {
+  const img = 'https://picsum.photos/200/100'
+  const card = {
+    title: 'Card title',
+    text: 'Card text card text card text card text card text card text card text',
+    button: 'Click here'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Card img = {img}>
+      <h5 className="card-title">{card.title}</h5>
+      <p className="card-text">{card.text}</p>
+      <button className="btn btn-primary">{card.button}</button>
+    </Card>
   );
 }
 
